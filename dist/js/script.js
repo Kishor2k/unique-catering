@@ -1,7 +1,6 @@
-
 AOS.init({
-  duration: 2000,
-  offset: 250,
+  duration: 1500,
+  offset: 200,
 });
 window.addEventListener("scroll", () => {
   const container = document.querySelector("#header .container");

@@ -107,6 +107,9 @@
 }
 
 @include mediaMd {
+  .intro-text {
+    font-size: 50px;
+  }
   #home {
     .wrapper {
       justify-content: center;
@@ -207,6 +210,9 @@
   }
 }
 @include mediaSm {
+  .intro-text {
+    font-size: 40px;
+  }
   #header {
     .brand img {
       height: 20px;
@@ -280,17 +286,13 @@
     }
   }
   #menu {
-    .main {
-      width: 100%;
-      overflow: hidden;
-    }
     .title {
       p {
         font-size: 18px;
       }
     }
     .wrapper {
-      width: 400px;
+      width: 350px;
     }
     .image img {
       width: 120px;
