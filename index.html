@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unique Catering</title>
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+    <link rel="stylesheet" href="./dist/css/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- header start-->
+    <section id="header">
+      <div class="header container">
+        <div class="nav-bar">
+          <div class="brand">
+            <a href="index.html"><img src="./images/logo.png" alt="logo" /></a>
+          </div>
+          <div class="nav-list">
+            <div class="hamburger">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <ul>
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="./dist/services.html">Services</a></li>
+              <li><a href="./dist/about.html">About Us</a></li>
+              <li><a href="./dist/contact.html">Contact</a></li>
+              <li><a href="./dist/menu.html">Menu</a></li>
+              <li><a href="./dist/gallery.html">Gallery</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- header end -->
+
+    <!-- home start -->
+    <section id="home">
+      <div class="home container">
+        <div class="wrapper">
+          <div class="company-details">
+            <div class="title">
+              <h1><span>Unique</span> Catering</h1>
+              <p> Quality food with Quality Service</p>
+              <div class="buttons">
+                <a href="#"><div class="btn btn1">Book Now!</div></a>
+               <a href="#"<div class="btn btn2">Explore Menu</div></a>
+              <div class="contact-us">
+                <p>Contact Us: 9851236097, 9851145703</p>
+              </div>
+            </div>
+          </div>
+          <div class="company-icon">
+            <img src="/images/CIRCLE LOGO.svg" alt="circle_logo" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- home end -->
+<!-- intro section -->
+<section id="intro">
+  <div class="intro-container">
+<div class="text">
+  <h1 class="intro-text">Eat healthy</h1>
+  <h1 class="intro-text">stay healthy</h1>
+  <h1 class="intro-text">stay fit.</h1>
+  
+</div>
+  </div>
+</section>
+<!-- end -->
+    <!-- servings start -->
+    <section id="why">
+      <div clendass="why container">
+      <div class="wrapper">
+        <div class="title">
+          <h1>Why Unique Catering?</h1>
+        </div>
+        <div class="cards-wrapper">
+          <div data-aos="fade-down" class="card card1">
+            <div class="card-img"><img src="/images/prawn-garlic.jpg" alt="prawn garlic"></div>
+            <div class="card-title">unbelieveable <br>food</div>
+            <div class="card-desc">Our catering creations are a deep form of love we live to share with people. Whether it's an hors d'oeuvre or an extravagant spread, you'll taste the passion in every bite.</div>
+          </div>
+
+          <div data-aos="fade-up" class="card card2">
+            <div class="card-img"><img src="/images/venue/uc1.jpg" alt="salad decoration"></div>
+            <div class="card-title">inspired presentation</div>
+            <div class="card-desc">The most memorable culinary experiences are those that inspire. We offer extraordinary culinary presentation, platings and venue decorations services with our experienced staff.</div>
+          </div>
+
+          <div data-aos="fade-down" class="card card3">
+            <div class="card-img"><img src="/images/drinks.jpg" alt="people drink"></div>
+            <div class="card-title">one-of-a-kind experience</div>
+            <div class="card-desc">Bring on the fun! We're all about learning what makes you feel joy and turning it into an extraordinary affair everyone remembers for years to come by providing our best services.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- servings end -->
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./dist/js/script.js"></script>
+    <script>
+      // homepage animation
+const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+
+tl.fromTo(
+  ".intro-text",
+  { opacity: 0 },
+  { opacity: 1, duration: 2, delay: 1, stagger: 0.5 }
+);
+tl.to(".intro-container", { y: "-100%", duration: 1 });
+tl.fromTo(".nav-bar", { y: "-100%" }, { y: "0%", duration: 1 });
+tl.fromTo(
+  "#home .wrapper",
+  { opacity: 0 },
+  { opacity: 1, duration: 1, delay: 0.5 }
+);
+// end
+     
+    </script>
+  </body>
+</html>

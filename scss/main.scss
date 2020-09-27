@@ -1,0 +1,645 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda+One&family=Pacifico&display=swap");
+// font-family: 'Merienda One', cursive;
+
+// font-family: 'Pacifico', cursive;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@import "config";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+// body {
+//   background: #111;
+// }
+.container {
+  min-height: 100vh;
+  width: 100%;
+  @include flex;
+  padding: 40px;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("/images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// header
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+  .header.container {
+    min-height: 8vh;
+    @include easeOut;
+    padding: 0px;
+    background: transparent;
+  }
+  .container.sticky {
+    background: teal;
+
+    .brand img {
+      height: 30px;
+    }
+    .nav-bar {
+      width: 90%;
+    }
+    .nav-list a {
+      padding: 10px;
+    }
+  }
+  .brand img {
+    height: 40px;
+    @include easeOut;
+  }
+  .nav-bar {
+    @include flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 5px 20px;
+    @include easeOut;
+  }
+  .nav-list {
+    width: 60%;
+    ul {
+      position: relative;
+      list-style: none;
+      @include flex;
+      justify-content: space-between;
+      height: 100%;
+      width: 100%;
+    }
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+      display: inline-block;
+      padding: 20px;
+      font-weight: 600;
+      @include easeOut;
+      &:hover {
+        color: $secondary-color;
+      }
+      &.active {
+        color: $secondary-color;
+      }
+    }
+    .hamburger {
+      @include flex;
+      justify-content: space-between;
+      flex-direction: column;
+      width: 30px;
+      height: 25px;
+      display: none;
+      .bar {
+        background: #fff;
+        border-radius: 2px;
+        height: 3px;
+        width: 100%;
+      }
+    }
+  }
+}
+// header end
+
+// home start
+h1 {
+  font-family: "Merienda One", cursive;
+}
+#home {
+  .wrapper {
+    @include flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .title {
+    color: #fff;
+    h1 {
+      font-family: "Merienda One", cursive;
+      font-size: 60px;
+      text-transform: uppercase;
+      line-height: 80px;
+      span {
+        @extend h1;
+        color: $secondary-color;
+      }
+    }
+    p {
+      font-family: "Pacifico", cursive;
+      font-size: 20px;
+    }
+  }
+  .buttons {
+    display: flex;
+    padding: 20px 0px;
+    a {
+      text-decoration: none;
+    }
+    .btn1 {
+      background: $secondary-color;
+      padding: 10px 20px;
+      color: $primary-color;
+      font-weight: 600;
+      border-top-right-radius: 25px;
+      border-bottom-left-radius: 25px;
+      text-transform: uppercase;
+      color: #fff;
+      @include easeOut;
+      &:hover {
+        background: lighten($secondary-color, 10);
+      }
+    }
+    .btn2 {
+      @extend .btn1;
+      margin-left: 20px;
+      background: none;
+      border: 2px solid $secondary-color;
+      &:hover {
+        background: $secondary-color;
+      }
+    }
+  }
+  .contact-us p {
+    margin-top: 10px;
+    font-size: 25px;
+    color: #fff;
+    font-family: "poppins", sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    animation: color-change 3s linear infinite alternate;
+  }
+  .company-icon img {
+    height: 250px;
+    margin-right: 400px;
+  }
+}
+@keyframes color-change {
+  from {
+    color: #fff;
+  }
+  to {
+    color: $secondary-color;
+  }
+}
+// home end
+// intro
+
+.intro-container {
+  height: 100vh;
+  width: 100%;
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  @include flex;
+}
+
+.intro-text {
+  color: #eee;
+  font-size: 40px;
+  opacity: 1;
+  font-family: "poppins";
+  font-weight: 600;
+}
+
+// servings start
+#why,
+#servings {
+  .why.container {
+    background: #eee;
+  }
+  .wrapper {
+    @include flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 90vh;
+  }
+  .title h1 {
+    color: $primary-color;
+    font-size: 40px;
+    margin-top: 20px;
+  }
+  .cards-wrapper {
+    @include flex;
+    justify-content: space-around;
+    width: 90%;
+  }
+  .card {
+    @include flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: lighten($primary-color, 20);
+    margin-left: 20px;
+    min-height: 450px;
+    width: 300px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0px 0px 20px #555;
+    &.card2 .card-img img,
+    &.card3 .card-img img {
+      height: 150px;
+    }
+    .card-img {
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      @include flex;
+      overflow: hidden;
+      img {
+        @include easeOut;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+    .card-title {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 20px;
+      letter-spacing: 1px;
+      color: $secondary-color;
+      margin-top: 10px;
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $secondary-color;
+        height: 5%;
+        width: 50%;
+      }
+    }
+    .card-desc {
+      margin-top: 10px;
+      font-weight: 300;
+    }
+  }
+}
+// servings end
+
+// services start
+#services {
+  .services.container {
+    flex-direction: column;
+    color: #fff;
+  }
+}
+.main {
+  text-align: center;
+  max-width: 600px;
+  color: #fff;
+  .yellow-head {
+    font-size: 60px;
+    color: $secondary-color;
+  }
+  .para {
+    font-size: 20px;
+    font-family: "pacifico", sans-serif;
+    letter-spacing: 1px;
+  }
+}
+// services end
+
+// wedding start
+#wedding,
+#rental,
+#gathering {
+  .white {
+    background: #fff;
+  }
+  .wrapper {
+    @include flex;
+    width: 90%;
+    justify-content: space-between;
+  }
+  .text {
+    @include flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    width: 40%;
+    gap: 30px;
+    color: #111;
+    h1 {
+      font-family: "poppins", sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 40px;
+    }
+  }
+  .button {
+    margin-top: 20px;
+    @include easeOut;
+    &:hover {
+      transform: translateY(-5px);
+    }
+    a {
+      text-decoration: none;
+      background: $secondary-color;
+      padding: 10px 20px;
+      border-radius: 3px;
+      color: #fff;
+      font-weight: 600;
+      color: #222;
+      box-shadow: 0px 2px 10px #999;
+      @include easeOut;
+      &:hover {
+        background: lighten($secondary-color, 20);
+      }
+    }
+  }
+  .image img {
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px #777;
+  }
+}
+// wedding end
+#gathering {
+  .image img {
+    width: 450px;
+  }
+}
+#rental {
+  .image img {
+    width: 450px;
+  }
+}
+// about start
+#about {
+  .container {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("/images/bg.jpg");
+  }
+  .main {
+    p {
+      margin-top: 20px;
+      width: 500px;
+      background: darken($primary-color, 20);
+      font-family: "poppins", sans-serif;
+      font-size: 16px;
+      padding: 10px;
+      font-weight: 300;
+      border-radius: 5px;
+      box-shadow: 0 0 20px #000;
+    }
+  }
+}
+// about end
+
+// contact start
+#contact {
+  .container {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("/images/bg.jpg");
+  }
+  .main {
+    margin-top: 40px;
+    @include flex;
+    flex-direction: column;
+    height: 75vh;
+    .wrapper {
+      background: rgba(0, 0, 0, 0.9);
+      box-shadow: 0 0 20px #000;
+      border-radius: 5px;
+      width: 900px;
+      margin-top: 20px;
+      @include flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+  }
+  .address {
+    @include flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0px 20px;
+    height: 100%;
+  }
+  .location {
+    @include flex;
+  }
+  .number {
+    @include flex;
+  }
+  .social-media {
+    @include flex;
+  }
+  .icon {
+    width: 50px;
+    height: 50px;
+    background: $secondary-color;
+    @include flex;
+    border-radius: 50%;
+    i {
+      font-size: 25px;
+      color: $primary-color;
+    }
+  }
+  .text {
+    margin-left: 20px;
+    span {
+      color: $secondary-color;
+      font-weight: 600;
+    }
+  }
+  .map iframe {
+    width: 380px;
+    height: 380px;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  .social-media {
+    .text {
+      background: #3b5998;
+      padding: 5px 20px;
+      border-radius: 3px;
+      box-shadow: 2px 4px 5px #000;
+      @include easeOut;
+      &:hover {
+        background: lighten(#3b5998, 10);
+        transform: translateY(-5px);
+      }
+    }
+  }
+}
+// contact end
+// menu
+#menu {
+  .title {
+    h1 {
+      line-height: 50px;
+    }
+  }
+  .main {
+    @include flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .wrapper {
+    display: grid;
+    width: 900px;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .image {
+    @include flex;
+    img {
+      border-radius: 50%;
+      border: 3px solid #fff;
+      height: 150px;
+      width: 150px;
+    }
+  }
+  .name h5 {
+    padding: 20px;
+    font-weight: 300;
+    font-size: 20px;
+  }
+}
+// menu end
+// servings
+#servings {
+  .servings.container {
+    background: #eee;
+  }
+  .card:nth-child(3) img {
+    width: 200px;
+  }
+}
+// servings end
+// gallery
+.header.gallery-container {
+  min-height: 8vh;
+  background: teal;
+}
+#gallery {
+  .gallery.container {
+    background: #eee;
+    max-width: 100vw;
+  }
+
+  .main {
+    position: relative;
+    min-height: 100vh;
+    max-width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    @include flex;
+    flex-direction: column;
+    h1 {
+      color: rgb(20, 20, 20);
+      text-shadow: 1px 1px 5px #888;
+    }
+    p {
+      color: #111;
+    }
+  }
+  .image-gallery {
+    position: relative;
+    height: 100%;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+    // grid-template-areas: "img-1 img-1 img-2 img-2";
+    .img {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+
+      @include easeOut;
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+
+    .img-1 {
+      grid-column-start: span 2;
+      grid-row-start: span 2;
+      // grid-area: img-1;
+    }
+    .img-2 {
+      // grid-area: img-2;
+    }
+    .img-3 {
+      grid-row-start: span 2;
+      // grid-area: img-3;
+    }
+    .img-4 {
+      // grid-area: img-4;
+    }
+    .img-5 {
+      grid-row-start: span 2;
+      // grid-area: img-5;
+    }
+    .img-6 {
+      grid-row-start: span 2;
+      grid-column-start: span 2;
+      // grid-area: img-6;
+    }
+    .img-7 {
+      // grid-area: img-7;
+    }
+    .img-8 {
+      // grid-area: img-8;
+    }
+    .img-9 {
+      grid-row: span 2;
+      // grid-area: img-9;
+    }
+    .img-10 {
+      grid-column: span 3;
+      // grid-area: img-10;
+    }
+    .img-11 {
+      // grid-area: img-11;
+    }
+    .img-12 {
+      // grid-area: img-12;
+    }
+    .img-13 {
+      // grid-area: img-13;
+    }
+    .img-14 {
+      // grid-area: img-14;
+    }
+    .img-15 {
+      // grid-area: img-15;
+    }
+    .img-16 {
+      grid-column: span 2;
+      // grid-area: img-16;
+    }
+  }
+}
+
+@import "queries";
