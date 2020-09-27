@@ -298,6 +298,10 @@ h1, #home .title h1 span {
   font-weight: 600;
 }
 
+.intro-text span {
+  color: #fdd146;
+}
+
 #why .why.container,
 #servings .why.container {
   background: #eee;
@@ -779,6 +783,8 @@ h1, #home .title h1 span {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1238,6 +1244,10 @@ h1, #home .title h1 span {
   }
   #contact .map iframe {
     width: 280px;
+  }
+  #menu .main {
+    width: 100%;
+    overflow: hidden;
   }
   #menu .title p {
     font-size: 18px;

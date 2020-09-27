@@ -280,6 +280,10 @@
     }
   }
   #menu {
+    .main {
+      width: 100%;
+      overflow: hidden;
+    }
     .title {
       p {
         font-size: 18px;
