@@ -379,8 +379,10 @@ h1, #home .title h1 span {
           box-shadow: 0px 0px 20px #555;
 }
 
+#why .card.card1 .card-img img,
 #why .card.card2 .card-img img,
 #why .card.card3 .card-img img,
+#servings .card.card1 .card-img img,
 #servings .card.card2 .card-img img,
 #servings .card.card3 .card-img img {
   height: 150px;
